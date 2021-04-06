@@ -95,15 +95,15 @@
 							<span class="label-input100">Number of legs *</span>
 
 							<div class="contact100-form-radio m-t-15">
-								<input class="input-radio100" id="radio1" type="radio" name="type-product" value="1" checked="checked">
-								<label class="label-radio100" for="radio1">
+								<input class="input-radio100" id="singleLeg" type="radio" name="type-leg" value="1" checked="checked">
+								<label class="label-radio100" for="singleLeg">
 									Single leg
 								</label>
 							</div>
 
 							<div class="contact100-form-radio">
-								<input class="input-radio100" id="radio2" type="radio" name="type-product" value="2">
-								<label class="label-radio100" for="radio2">
+								<input class="input-radio100" id="doubleLeg" type="radio" name="type-leg" value="2">
+								<label class="label-radio100" for="doubleLeg">
 									Home & Away
 								</label>
 							</div>
@@ -116,8 +116,8 @@
 					</div>
 
 					<div class="wrap-input100 bg1 rs1-wrap-input100">
-						<span class="label-input100">Bonus points</span>
-						<input class="input100" type="number" name="bonus" placeholder="Enter Bonus points">
+						<span class="label-input100">Bonus points *</span>
+						<input class="input100" type="number" name="bonus" placeholder="Enter Bonus points" id="bonus">
 					</div>
 
 					<div id="allTeams">
@@ -205,8 +205,6 @@
 	        $('.contact100-form-range-value input[name="to-value"]').val($('#value-upper').html());
 	    });
 	</script>
-<!--===============================================================================================-->
-	<script src="make-tournament/js/main.js"></script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
@@ -230,26 +228,14 @@
   <!-- Add Firebase products that you want to use -->
   <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-firestore.js"></script>
 
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
-
 <script>
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  var firebaseConfig = {
-    apiKey: "AIzaSyCdwHEqvLzSWaHrqkHSchHwyVxz4LdsBck",
-    authDomain: "fifa-tnmt.firebaseapp.com",
-    databaseURL: "https://fifa-tnmt-default-rtdb.firebaseio.com",
-    projectId: "fifa-tnmt",
-    storageBucket: "fifa-tnmt.appspot.com",
-    messagingSenderId: "546072301727",
-    appId: "1:546072301727:web:5d80f00f01bf1ae9a6d2aa",
-    measurementId: "G-SVJ4T3XXT7"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
+document.addEventListener("DOMContentLoaded", function() {
+	initDB();
+});
 </script>
+
+<!--===============================================================================================-->
+<script src="make-tournament/js/main.js"></script>
 
 </body>
 </html>
